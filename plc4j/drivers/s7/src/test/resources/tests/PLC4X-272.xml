@@ -43,21 +43,21 @@
     <outgoing-plc-message name="Send COTP Connection Request">
       <TPKTPacket className="org.apache.plc4x.java.s7.readwrite.TPKTPacket">
         <payload className="org.apache.plc4x.java.s7.readwrite.COTPPacketConnectionRequest">
-          <parameters>
-            <parameters className="org.apache.plc4x.java.s7.readwrite.COTPParameterCalledTsap">
-              <tsapId>256</tsapId>
-            </parameters>
-            <parameters className="org.apache.plc4x.java.s7.readwrite.COTPParameterCallingTsap">
-              <tsapId>785</tsapId>
-            </parameters>
-            <parameters className="org.apache.plc4x.java.s7.readwrite.COTPParameterTpduSize">
-              <tpduSize>SIZE_1024</tpduSize>
-            </parameters>
-          </parameters>
           <payload/>
           <destinationReference>0</destinationReference>
           <sourceReference>15</sourceReference>
           <protocolClass>CLASS_0</protocolClass>
+          <parameters>
+            <parameter className="org.apache.plc4x.java.s7.readwrite.COTPParameterCalledTsap">
+              <tsapId>256</tsapId>
+            </parameter>
+            <parameter className="org.apache.plc4x.java.s7.readwrite.COTPParameterCallingTsap">
+              <tsapId>785</tsapId>
+            </parameter>
+            <parameter className="org.apache.plc4x.java.s7.readwrite.COTPParameterTpduSize">
+              <tpduSize>SIZE_1024</tpduSize>
+            </parameter>
+          </parameters>
         </payload>
       </TPKTPacket>
     </outgoing-plc-message>
@@ -65,21 +65,21 @@
     <incoming-plc-message name="Receive COTP Connection Response">
       <TPKTPacket className="org.apache.plc4x.java.s7.readwrite.TPKTPacket">
         <payload className="org.apache.plc4x.java.s7.readwrite.COTPPacketConnectionResponse">
-          <parameters>
-            <parameters className="org.apache.plc4x.java.s7.readwrite.COTPParameterTpduSize">
-              <tpduSize>SIZE_1024</tpduSize>
-            </parameters>
-            <parameters className="org.apache.plc4x.java.s7.readwrite.COTPParameterCallingTsap">
-              <tsapId>785</tsapId>
-            </parameters>
-            <parameters className="org.apache.plc4x.java.s7.readwrite.COTPParameterCalledTsap">
-              <tsapId>256</tsapId>
-            </parameters>
-          </parameters>
           <payload/>
           <destinationReference>15</destinationReference>
           <sourceReference>11</sourceReference>
           <protocolClass>CLASS_0</protocolClass>
+          <parameters>
+            <parameter className="org.apache.plc4x.java.s7.readwrite.COTPParameterTpduSize">
+              <tpduSize>SIZE_1024</tpduSize>
+            </parameter>
+            <parameter className="org.apache.plc4x.java.s7.readwrite.COTPParameterCallingTsap">
+              <tsapId>785</tsapId>
+            </parameter>
+            <parameter className="org.apache.plc4x.java.s7.readwrite.COTPParameterCalledTsap">
+              <tsapId>256</tsapId>
+            </parameter>
+          </parameters>
         </payload>
       </TPKTPacket>
     </incoming-plc-message>
@@ -87,7 +87,6 @@
     <outgoing-plc-message name="Send S7 Connection Request">
       <TPKTPacket className="org.apache.plc4x.java.s7.readwrite.TPKTPacket">
         <payload className="org.apache.plc4x.java.s7.readwrite.COTPPacketData">
-          <parameters/>
           <payload className="org.apache.plc4x.java.s7.readwrite.S7MessageRequest">
             <tpduReference>0</tpduReference>
             <parameter className="org.apache.plc4x.java.s7.readwrite.S7ParameterSetupCommunication">
@@ -99,6 +98,7 @@
           </payload>
           <eot>true</eot>
           <tpduRef>1</tpduRef>
+          <parameters/>
         </payload>
       </TPKTPacket>
     </outgoing-plc-message>
@@ -106,7 +106,6 @@
     <incoming-plc-message name="Receive S7 Connection Response">
       <TPKTPacket className="org.apache.plc4x.java.s7.readwrite.TPKTPacket">
         <payload className="org.apache.plc4x.java.s7.readwrite.COTPPacketData">
-          <parameters/>
           <payload className="org.apache.plc4x.java.s7.readwrite.S7MessageResponseData">
             <tpduReference>0</tpduReference>
             <parameter className="org.apache.plc4x.java.s7.readwrite.S7ParameterSetupCommunication">
@@ -120,6 +119,7 @@
           </payload>
           <eot>true</eot>
           <tpduRef>0</tpduRef>
+          <parameters/>
         </payload>
       </TPKTPacket>
     </incoming-plc-message>
@@ -127,12 +127,11 @@
     <outgoing-plc-message name="Send S7 Identification Request">
       <TPKTPacket className="org.apache.plc4x.java.s7.readwrite.TPKTPacket">
         <payload className="org.apache.plc4x.java.s7.readwrite.COTPPacketData">
-          <parameters/>
           <payload className="org.apache.plc4x.java.s7.readwrite.S7MessageUserData">
             <tpduReference>1</tpduReference>
             <parameter className="org.apache.plc4x.java.s7.readwrite.S7ParameterUserData">
               <items>
-                <items className="org.apache.plc4x.java.s7.readwrite.S7ParameterUserDataItemCPUFunctions">
+                <item className="org.apache.plc4x.java.s7.readwrite.S7ParameterUserDataItemCPUFunctions">
                   <method>17</method>
                   <cpuFunctionType>4</cpuFunctionType>
                   <cpuFunctionGroup>4</cpuFunctionGroup>
@@ -141,12 +140,12 @@
                   <dataUnitReferenceNumber/>
                   <lastDataUnit/>
                   <errorCode/>
-                </items>
+                </item>
               </items>
             </parameter>
             <payload className="org.apache.plc4x.java.s7.readwrite.S7PayloadUserData">
               <items>
-                <items className="org.apache.plc4x.java.s7.readwrite.S7PayloadUserDataItemCpuFunctionReadSzlRequest">
+                <item className="org.apache.plc4x.java.s7.readwrite.S7PayloadUserDataItemCpuFunctionReadSzlRequest">
                   <returnCode>OK</returnCode>
                   <transportSize>OCTET_STRING</transportSize>
                   <szlId className="org.apache.plc4x.java.s7.readwrite.SzlId">
@@ -155,12 +154,13 @@
                     <sublistList>MODULE_IDENTIFICATION</sublistList>
                   </szlId>
                   <szlIndex>0</szlIndex>
-                </items>
+                </item>
               </items>
             </payload>
           </payload>
           <eot>true</eot>
           <tpduRef>2</tpduRef>
+          <parameters/>
         </payload>
       </TPKTPacket>
     </outgoing-plc-message>
@@ -168,12 +168,11 @@
     <incoming-plc-message name="Receive S7 Identification Response">
       <TPKTPacket className="org.apache.plc4x.java.s7.readwrite.TPKTPacket">
         <payload className="org.apache.plc4x.java.s7.readwrite.COTPPacketData">
-          <parameters/>
           <payload className="org.apache.plc4x.java.s7.readwrite.S7MessageUserData">
             <tpduReference>1</tpduReference>
             <parameter className="org.apache.plc4x.java.s7.readwrite.S7ParameterUserData">
               <items>
-                <items className="org.apache.plc4x.java.s7.readwrite.S7ParameterUserDataItemCPUFunctions">
+                <item className="org.apache.plc4x.java.s7.readwrite.S7ParameterUserDataItemCPUFunctions">
                   <method>18</method>
                   <cpuFunctionType>8</cpuFunctionType>
                   <cpuFunctionGroup>4</cpuFunctionGroup>
@@ -182,7 +181,7 @@
                   <dataUnitReferenceNumber>0</dataUnitReferenceNumber>
                   <lastDataUnit>0</lastDataUnit>
                   <errorCode>0</errorCode>
-                </items>
+                </item>
               </items>
             </parameter>
             <payload className="org.apache.plc4x.java.s7.readwrite.S7PayloadUserData">
@@ -225,6 +224,7 @@
           </payload>
           <eot>true</eot>
           <tpduRef>0</tpduRef>
+          <parameters/>
         </payload>
       </TPKTPacket>
     </incoming-plc-message>
@@ -642,7 +642,6 @@
       <!--outgoing-plc-message name="Send first part of the S7 Read Request">
         <TPKTPacket className="org.apache.plc4x.java.s7.readwrite.TPKTPacket">
           <payload className="org.apache.plc4x.java.s7.readwrite.COTPPacketData">
-            <parameters/>
             <payload className="org.apache.plc4x.java.s7.readwrite.S7MessageRequest">
               <tpduReference>10</tpduReference>
               <parameter className="org.apache.plc4x.java.s7.readwrite.S7ParameterReadVarRequest">
@@ -1049,7 +1048,6 @@
       <outgoing-plc-message name="Send second part of the S7 Read Request">
         <TPKTPacket className="org.apache.plc4x.java.s7.readwrite.TPKTPacket">
           <payload className="org.apache.plc4x.java.s7.readwrite.COTPPacketData">
-            <parameters/>
             <payload className="org.apache.plc4x.java.s7.readwrite.S7MessageRequest">
               <tpduReference>11</tpduReference>
               <parameter className="org.apache.plc4x.java.s7.readwrite.S7ParameterReadVarRequest">
@@ -1456,7 +1454,6 @@
       <incoming-plc-message name="Receive first part S7 Read Response">
         <TPKTPacket className="org.apache.plc4x.java.s7.readwrite.TPKTPacket">
           <payload className="org.apache.plc4x.java.s7.readwrite.COTPPacketData">
-            <parameters/>
             <payload className="org.apache.plc4x.java.s7.readwrite.S7MessageResponseData">
               <tpduReference>10</tpduReference>
               <parameter className="org.apache.plc4x.java.s7.readwrite.S7ParameterReadVarResponse">
@@ -1672,7 +1669,6 @@
       <outgoing-plc-message name="Send second part of the S7 Read Request">
         <TPKTPacket className="org.apache.plc4x.java.s7.readwrite.TPKTPacket">
           <payload className="org.apache.plc4x.java.s7.readwrite.COTPPacketData">
-            <parameters/>
             <payload className="org.apache.plc4x.java.s7.readwrite.S7MessageRequest">
               <tpduReference>12</tpduReference>
               <parameter className="org.apache.plc4x.java.s7.readwrite.S7ParameterReadVarRequest">
@@ -1909,7 +1905,6 @@
       <incoming-plc-message name="Receive second part S7 Read Response">
         <TPKTPacket className="org.apache.plc4x.java.s7.readwrite.TPKTPacket">
           <payload className="org.apache.plc4x.java.s7.readwrite.COTPPacketData">
-            <parameters/>
             <payload className="org.apache.plc4x.java.s7.readwrite.S7MessageResponseData">
               <tpduReference>11</tpduReference>
               <parameter className="org.apache.plc4x.java.s7.readwrite.S7ParameterReadVarResponse">
@@ -2125,7 +2120,6 @@
       <incoming-plc-message name="Receive third part S7 Read Response">
         <TPKTPacket className="org.apache.plc4x.java.s7.readwrite.TPKTPacket">
           <payload className="org.apache.plc4x.java.s7.readwrite.COTPPacketData">
-            <parameters/>
             <payload className="org.apache.plc4x.java.s7.readwrite.S7MessageResponseData">
               <tpduReference>12</tpduReference>
               <parameter className="org.apache.plc4x.java.s7.readwrite.S7ParameterReadVarResponse">

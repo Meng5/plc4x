@@ -27,7 +27,7 @@ import (
 
 func TestAdsDriver(t *testing.T) {
 	testutils.RunDriverTestsuite(t, ads.NewDriver(), "assets/testing/protocols/ads/DriverTestsuite.xml",
-		// TODO: currently there seem to be issues with the generated code
+		// TODO: currently there seem to be issues with the generated code. Xml lists can't be parsed as of now
 		"Multi-element direct read request",
 	)
 }

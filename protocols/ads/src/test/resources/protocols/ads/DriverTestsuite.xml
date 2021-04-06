@@ -229,19 +229,19 @@
               <indexGroup>61568</indexGroup>
               <indexOffset>2</indexOffset>
               <readLength>10</readLength>
+              <data></data>
               <items>
-                <items className="org.apache.plc4x.java.ads.readwrite.AdsMultiRequestItemRead">
+                <item className="org.apache.plc4x.java.ads.readwrite.AdsMultiRequestItemRead">
                   <itemIndexGroup>4040</itemIndexGroup>
                   <itemIndexOffset>8</itemIndexOffset>
                   <itemReadLength>1</itemReadLength>
-                </items>
-                <items className="org.apache.plc4x.java.ads.readwrite.AdsMultiRequestItemRead">
+                </item>
+                <item className="org.apache.plc4x.java.ads.readwrite.AdsMultiRequestItemRead">
                   <itemIndexGroup>4040</itemIndexGroup>
                   <itemIndexOffset>12</itemIndexOffset>
                   <itemReadLength>1</itemReadLength>
-                </items>
+                </item>
               </items>
-              <data></data>
             </data>
           </userdata>
         </AmsTCPPacket>
@@ -381,8 +381,8 @@
               <indexGroup>61443</indexGroup>
               <indexOffset>0</indexOffset>
               <readLength>4</readLength>
-              <items/>
               <data>6D61696E2E665F74726967446174656947656C6573656E2E4D00</data>
+              <items/>
             </data>
           </userdata>
         </AmsTCPPacket>
@@ -594,8 +594,8 @@
               <indexGroup>61443</indexGroup>
               <indexOffset>0</indexOffset>
               <readLength>4</readLength>
-              <items/>
               <data>6D61696E2E665F74726967446174656947656C6573656E2E4D00</data>
+              <items/>
             </data>
           </userdata>
         </AmsTCPPacket>

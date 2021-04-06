@@ -20,6 +20,8 @@ package org.apache.plc4x.plugins.codegenerator.protocol.freemarker;
 
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
+import org.apache.commons.lang3.RegExUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.plc4x.plugins.codegenerator.language.mspec.model.definitions.DefaultTypeDefinition;
 import org.apache.plc4x.plugins.codegenerator.types.definitions.*;
 import org.apache.plc4x.plugins.codegenerator.types.enums.EnumValue;
@@ -963,6 +965,24 @@ public abstract class BaseFreemarkerLanguageTemplateHelper implements Freemarker
             }
         }
         return null;
+    }
+
+    /**
+     * Replaces plural words with english singular words (e.g. entries -> entry, items -> item)
+     * @param fieldName
+     * @return
+     */
+    public String toSingularFieldName(String fieldName) {
+        return StringUtils.removeEnd(RegExUtils.replaceAll(fieldName, "ies","y"),"s");
+    }
+
+    /**
+     * Can be used to debug templates by putting a breakpoint onto the line
+     * @param o a random object
+     * @return always true
+     */
+    public boolean breakPoint(Object o) {
+        return true;
     }
 
 }

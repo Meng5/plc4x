@@ -68,6 +68,7 @@ import static org.apache.plc4x.java.spi.generation.StaticHelper.*;
 import ${helper.packageName(protocolName, languageName, outputFlavor)}.io.*;
 import ${helper.packageName(protocolName, languageName, outputFlavor)}.types.*;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.*;
 import com.fasterxml.jackson.annotation.*;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -132,6 +133,11 @@ public<#if helper.isDiscriminatedParentTypeDefinition()> abstract</#if> class ${
 
     // Properties.
 <#list type.propertyFields as field>
+    <#if helper.breakPoint(field)></#if>
+    <#if field.loopType?? && helper.isComplexTypeReference(field.type)>
+    @JacksonXmlProperty(localName = "${helper.toSingularFieldName(field.name)}")
+    @JacksonXmlElementWrapper(localName = "${field.name}")
+    </#if>
     private final ${helper.getLanguageTypeNameForField(field)}<#if field.loopType??>[]</#if> ${field.name};
 </#list>
 </#if>
@@ -148,6 +154,10 @@ public<#if helper.isDiscriminatedParentTypeDefinition()> abstract</#if> class ${
     }
 
 <#list type.propertyFields as field>
+    <#if field.loopType?? && helper.isComplexTypeReference(field.type)>
+    @JacksonXmlProperty(localName = "${helper.toSingularFieldName(field.name)}")
+    @JacksonXmlElementWrapper(localName = "${field.name}")
+    </#if>
     <#if helper.isAbstractField(field)>
     public ${helper.getLanguageTypeNameForField(field)}<#if field.loopType??>[]</#if> abstract get${field.name?cap_first}();
     <#else>

@@ -171,15 +171,15 @@
         <dibSuppSvcFamilies className="org.apache.plc4x.java.knxnetip.readwrite.DIBSuppSvcFamilies">
           <descriptionType>2</descriptionType>
           <serviceIds>
-            <serviceIds className="org.apache.plc4x.java.knxnetip.readwrite.KnxNetIpCore">
+            <serviceId className="org.apache.plc4x.java.knxnetip.readwrite.KnxNetIpCore">
               <version>1</version>
-            </serviceIds>
-            <serviceIds className="org.apache.plc4x.java.knxnetip.readwrite.KnxNetIpDeviceManagement">
+            </serviceId>
+            <serviceId className="org.apache.plc4x.java.knxnetip.readwrite.KnxNetIpDeviceManagement">
               <version>1</version>
-            </serviceIds>
-            <serviceIds className="org.apache.plc4x.java.knxnetip.readwrite.KnxNetIpTunneling">
+            </serviceId>
+            <serviceId className="org.apache.plc4x.java.knxnetip.readwrite.KnxNetIpTunneling">
               <version>1</version>
-            </serviceIds>
+            </serviceId>
           </serviceIds>
         </dibSuppSvcFamilies>
       </SearchResponse>
@@ -236,15 +236,15 @@
         <dibSuppSvcFamilies className="org.apache.plc4x.java.knxnetip.readwrite.DIBSuppSvcFamilies">
           <descriptionType>2</descriptionType>
           <serviceIds>
-            <serviceIds className="org.apache.plc4x.java.knxnetip.readwrite.KnxNetIpCore">
+            <serviceId className="org.apache.plc4x.java.knxnetip.readwrite.KnxNetIpCore">
               <version>1</version>
-            </serviceIds>
-            <serviceIds className="org.apache.plc4x.java.knxnetip.readwrite.KnxNetIpDeviceManagement">
+            </serviceId>
+            <serviceId className="org.apache.plc4x.java.knxnetip.readwrite.KnxNetIpDeviceManagement">
               <version>1</version>
-            </serviceIds>
-            <serviceIds className="org.apache.plc4x.java.knxnetip.readwrite.KnxNetIpTunneling">
+            </serviceId>
+            <serviceId className="org.apache.plc4x.java.knxnetip.readwrite.KnxNetIpTunneling">
               <version>1</version>
-            </serviceIds>
+            </serviceId>
           </serviceIds>
         </dibSuppSvcFamilies>
       </DescriptionResponse>

@@ -73,18 +73,18 @@
         <unitIdentifier>1</unitIdentifier>
         <pdu className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUReadFileRecordRequest">
           <items>
-            <items className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUReadFileRecordRequestItem">
+            <item className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUReadFileRecordRequestItem">
               <referenceType>6</referenceType>
               <fileNumber>3</fileNumber>
               <recordNumber>9998</recordNumber>
               <recordLength>2</recordLength>
-            </items>
-            <items className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUReadFileRecordRequestItem">
+            </item>
+            <item className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUReadFileRecordRequestItem">
               <referenceType>6</referenceType>
               <fileNumber>4</fileNumber>
               <recordNumber>0</recordNumber>
               <recordLength>8</recordLength>
-            </items>
+            </item>
           </items>
         </pdu>
       </ModbusTcpADU>
@@ -104,14 +104,14 @@
         <unitIdentifier>1</unitIdentifier>
         <pdu className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUReadFileRecordResponse">
           <items>
-            <items className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUReadFileRecordResponseItem">
+            <item className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUReadFileRecordResponseItem">
               <referenceType>6</referenceType>
               <data>00000000</data>
-            </items>
-            <items className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUReadFileRecordResponseItem">
+            </item>
+            <item className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUReadFileRecordResponseItem">
               <referenceType>6</referenceType>
               <data>00000000000000000000000000000000</data>
-            </items>
+            </item>
           </items>
         </pdu>
       </ModbusTcpADU>
@@ -132,12 +132,12 @@
         <unitIdentifier>1</unitIdentifier>
         <pdu className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUWriteFileRecordRequest">
           <items>
-            <items className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUWriteFileRecordRequestItem">
+            <item className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUWriteFileRecordRequestItem">
               <referenceType>6</referenceType>
               <fileNumber>2</fileNumber>
               <recordNumber>0</recordNumber>
               <recordData>0008</recordData>
-            </items>
+            </item>
           </items>
         </pdu>
       </ModbusTcpADU>
@@ -157,18 +157,18 @@
         <unitIdentifier>1</unitIdentifier>
         <pdu className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUWriteFileRecordRequest">
           <items>
-            <items className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUWriteFileRecordRequestItem">
+            <item className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUWriteFileRecordRequestItem">
               <referenceType>6</referenceType>
               <fileNumber>1</fileNumber>
               <recordNumber>9999</recordNumber>
               <recordData>0000</recordData>
-            </items>
-            <items className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUWriteFileRecordRequestItem">
+            </item>
+            <item className="org.apache.plc4x.java.modbus.readwrite.ModbusPDUWriteFileRecordRequestItem">
               <referenceType>6</referenceType>
               <fileNumber>2</fileNumber>
               <recordNumber>0</recordNumber>
               <recordData>0000</recordData>
-            </items>
+            </item>
           </items>
         </pdu>
       </ModbusTcpADU>

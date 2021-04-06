@@ -90,6 +90,7 @@
             <Bundle-Activator>org.apache.plc4x.java.osgi.DriverActivator</Bundle-Activator>
             <Export-Service>org.apache.plc4x.java.api.PlcDriver,org.apache.plc4x.java.firmata.readwrite.FirmataDriver</Export-Service>
             <Import-Package>
+              com.fasterxml.jackson.dataformat.xml.annotation;resolution:=optional,
               com.fasterxml.jackson.annotation;resolution:=optional,
               *
             </Import-Package>
@@ -104,6 +105,7 @@
             <usedDependency>com.github.purejavacomm:purejavacomm</usedDependency>
             <usedDependency>org.apache.plc4x:plc4x-build-utils-language-java</usedDependency>
             <usedDependency>org.apache.plc4x:plc4x-protocols-firmata</usedDependency>
+            <usedDependency>com.fasterxml.jackson.dataformat:jackson-dataformat-xml</usedDependency>
           </usedDependencies>
         </configuration>
       </plugin>
@@ -135,6 +137,10 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-xml</artifactId>
     </dependency>
 
     <dependency>
